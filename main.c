@@ -67,6 +67,7 @@ int main()
 				state = START;
 				break;
 			}
+			allocateRects();
 			break;
 
 		case START_NODRAW: //Press A on Start or GameOver screen to go to game
@@ -145,7 +146,7 @@ int main()
 				if(result)
 				{
 					ball.rd *= -1;
-					if(result == 1 || result == 2)
+					if(result == 2)
 					{
 						ball.cd *= -1;
 					}
@@ -274,6 +275,5 @@ int main()
 			break;	
 		}	
 	}
-	freeRectangles();
 	return 0;
 }

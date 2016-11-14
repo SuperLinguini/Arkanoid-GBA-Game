@@ -73,13 +73,17 @@ void drawSpriteImage(int row, int col, int height, int width, int imageWidth, co
 	}
 }
 
+void allocateRects()
+{
+	rectangles = malloc(100 * sizeof(RECT));
+}
+
 //Create the level
 RECT* createLevel(short level)
 {
 	levelSize = sizeof(levels[level])/sizeof(char);
 	unsigned char levelFormat[levelSize];
 	memcpy(levelFormat,levels[level],levelSize);
-	rectangles = malloc(levelSize * sizeof(RECT));
 	
 	for(unsigned int i = 0; i < sizeof(levelFormat)/(sizeof(char)*15); i++)
 	{

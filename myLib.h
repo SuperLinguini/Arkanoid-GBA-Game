@@ -130,6 +130,7 @@ void setPixel(int row, int col, unsigned short color);
 RECT* createLevel(short level);
 void drawLevel();
 void freeRectangles();
+void allocateRects();
 
 extern RECT* rectangles;
 extern int levelSize;
